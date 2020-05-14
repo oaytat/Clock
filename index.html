@@ -1,0 +1,47 @@
+<html>
+  <link href='https://fonts.googleapis.com/css?family=Chathura' rel='stylesheet'>
+  <style>
+    .clock{
+    font-family: 'Chathura';
+    color: white;
+    font-size: 200px;
+    vertical-align: middle;
+    line-height: 735px;
+    text-align: center;
+    }
+    body{
+  background: url('minimalist-night-scenery-forest-deer-silhouette-uhdpaper.com-4K-4.1030.jpg');
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  -webkit-background-size: 100%; 
+  -moz-background-size: 100%; 
+  -o-background-size: 100%; 
+  background-size: 100%; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover;
+}
+    </style>
+
+      <script>
+      function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =
+      h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+      }
+      </script>
+      <div class = 'clock'>
+        <body onload="startTime()">
+        <div id = 'txt'></div>
+      </div>
